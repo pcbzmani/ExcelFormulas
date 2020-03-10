@@ -1,0 +1,16 @@
+If you have a numbers in the below format text. Following formula will help you to extarct the number alone from the text.
+
+Example : AVSKKLSDKLKD(12356)
+
+You want only 12356, go with the below formula
+Consider the text in A2 cell in the sheet
+=MID(text,StartNum, Numchar)
+
+=MID(A2,SEARCH("(",A2)+1,(SEARCH(")",A2)-SEARCH("(",A2))-1)+0
+
+Explanation:
+Mid will search the text and give the result from starting position to number of characters we need to display.
+
+In the Starting Num, we used search keyword "(" to find the starting position number + 1(to start with 1.
+In the Number of chars, we searched ")" - "(" and subtract one postion.
+Finally, +0 will convert the text to Number, by default MID will return the text.
