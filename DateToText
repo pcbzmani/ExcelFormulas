@@ -1,0 +1,8 @@
+Convert Date value into Text in Excel
+
+IF A3 = 25-Mar-20
+=TEXT(A3,"d-mmm-yy")
+
+IF A3 = 25-Mar-2020
+=TEXT(A3,"d-mmm-yyyy")
+
